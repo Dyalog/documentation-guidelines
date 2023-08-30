@@ -10,7 +10,7 @@ code {
 	font-family: APL;
   background: none;
 }
-code.nonAPL {
+.language-other {
   font-family: Courier, monospace; /*  */
 }
 .md-logo > img{

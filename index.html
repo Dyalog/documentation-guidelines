@@ -705,31 +705,42 @@
 <p>Introduce full examples with <code>&lt;p class="example"&gt;Example&lt;/p&gt;</code> (or "examples") so that it is on a line by itself.</p>
 <p>Exception – if there are several consecutive examples illustrating different things, they can each be introduced with "Example: &lt;text>" if that helps to clarify things for the reader.</p>
 <h2 id="code">Code</h2>
-<p>Inline code and code blocks render in APL font unless.</p>
-<p>We have disabled syntax highlighting, but in case we decide to  for semantic purposes and 
-<strong>TODO:</strong> how do we want to handle language-apl/nonAPL and unspecified code blocks?</p>
+<p>Inline code and code blocks render in APL font unless the class "language-other" is used.</p>
+<p>We have disabled syntax highlighting.</p>
 <h4 id="inline-code">Inline code</h4>
 <p>Inline, use <code>&lt;code&gt;[your code here]&lt;/code&gt;</code> or single backticks <code>`[your code here]`</code>.</p>
 <p class="example">Example</p>
 
+<pre class="highlight"><code>The average of a vector (&lt;code class="language-apl"&gt;+⌿÷≢&lt;/code&gt;) is the sum divided by the tally.</code></pre>
 <p>The average of a vector (<code class="language-apl">+⌿÷≢</code>) is the sum divided by the tally.</p>
 <h4 id="code-blocks">Code blocks</h4>
-<p>Code blocks use <code>&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</code>. Code blocks may use triple backticks with "apl" (lowercase) to denote the language. MkDocs will take care of adding the "language-apl" class in this case.</p>
+<p>Code blocks use <code>&lt;pre&gt;&lt;code class="language-apl"&gt;&lt;/code&gt;&lt;/pre&gt;</code> or triple backticks with "apl" (lowercase) to denote the language. MkDocs will take care of adding the "language-apl" class in this case.</p>
 <p class="example">Example</p>
 
-<pre><code class="language-apl">      3+⍳10
+<pre class="highlight"><code>&lt;pre&gt;&lt;code class="language-apl"&gt;      3+⍳10
 4 5 6 7 8 9 10 11 12 13
-</code></pre>
-
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<pre class="highlight"><code>```apl
+      3+⍳10
+4 5 6 7 8 9 10 11 12 13
+```</code></pre>
+<p>both render as</p>
+<pre class="highlight"><code class="language-apl">      3+⍳10
+4 5 6 7 8 9 10 11 12 13</code></pre>
 <h4 id="non-apl-code">Non-APL Code</h4>
-<p>Either use single backticks (<code>some code</code>) or <code>&lt;code class="nonAPL"&gt;some code&lt;/code&gt;</code>.</p>
-<p>Code blocks may use triple backticks with "[language]" to denote the language. MkDocs will take care of adding the "language-[language]" class in this case.</p>
+<p>Use <code>&lt;code class="language-other"&gt;[your code here]&lt;/code&gt;</code>.</p>
 <p class="example">Examples</p>
 
-<p>This is an inline example, <code class="nonAPL">print("hello")</code> is a print statement in Python.</p>
-<pre class="highlight"><code class="language-Python">&gt;&gt;&gt; print("hello")   # Code block example
+<p>This is an inline example, <code class="language-other">print("hello")</code> is a print statement in Python.</p>
+<pre class="highlight"><code>&lt;pre&gt;&lt;code class="language-other"&gt;&gt;&gt;&gt; print("hello")   # Code block example
+hello&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<pre class="highlight"><code>```other
+&gt;&gt;&gt; print("hello")   # Code block example
+hello
+```</code></pre>
+<p>both render as</p>
+<pre class="highlight"><code class="language-other">&gt;&gt;&gt; print("hello")   # Code block example
 hello</code></pre>
-<pre class="highlight"><code>No language specified</code></pre>
 <h3 id="apl-code-in-titles">APL Code <span class="language-apl">+⌿÷≢⌹</span> in Titles</h3>
 <p>Try to avoid using APL code in headings.</p>
 <p>If it is essential, use <code>&lt;span class="language-apl"&gt;</code> to add code to titles. This will be rendered in APL font on the page but not in the navigation menus.</p>
