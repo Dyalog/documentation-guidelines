@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dyalog-material-for-mkdocs-style-guide" class="md-skip">
+        <a href="#dyalog-documentation-style-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dyalog Material for MkDocs Style Guide
+              Dyalog Documentation Style Guide
             
           </span>
         </div>
@@ -192,12 +192,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Dyalog Material for MkDocs Style Guide
+          Dyalog Documentation Style Guide
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
-        Dyalog Material for MkDocs Style Guide
+        Dyalog Documentation Style Guide
       </a>
       
         
@@ -217,7 +217,7 @@
       
         <li class="md-nav__item">
   <a href="#document-structure-and-general-style-guidelines" class="md-nav__link">
-    Document structure and general style guidelines
+    Document Structure and General Style Guidelines
   </a>
   
 </li>
@@ -247,6 +247,33 @@
   <a href="#notes" class="md-nav__link">
     Notes
   </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-note" class="md-nav__link">
+    Creating a Note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-notes-for-emphasis" class="md-nav__link">
+    General Notes for Emphasis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-system-specific-behaviour" class="md-nav__link">
+    Operating-system-specific Behaviour
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -391,7 +418,7 @@
       
         <li class="md-nav__item">
   <a href="#document-structure-and-general-style-guidelines" class="md-nav__link">
-    Document structure and general style guidelines
+    Document Structure and General Style Guidelines
   </a>
   
 </li>
@@ -421,6 +448,33 @@
   <a href="#notes" class="md-nav__link">
     Notes
   </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-note" class="md-nav__link">
+    Creating a Note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-notes-for-emphasis" class="md-nav__link">
+    General Notes for Emphasis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-system-specific-behaviour" class="md-nav__link">
+    Operating-system-specific Behaviour
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -529,9 +583,19 @@
                   
 
 
-<h1 id="dyalog-material-for-mkdocs-style-guide">Dyalog Material for MkDocs Style Guide</h1>
-<h2 id="document-structure-and-general-style-guidelines">Document structure and general style guidelines</h2>
-<p>The document structure and general style, including the use of Dyalog-specific terms, mentioning third party products, use of acronyms etc. should be followed according to the page <a href="http://wiki.dyalog.bramley/index.php/Style_Guide_and_Best_Practice">Style_Guide_and_Best_Practice</a> on the internal wiki.</p>
+<h1 id="dyalog-documentation-style-guide">Dyalog Documentation Style Guide</h1>
+<p>When using <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></p>
+<p>todo: how to do things in markdown/html</p>
+<h2 id="document-structure-and-general-style-guidelines">Document Structure and General Style Guidelines</h2>
+<div class="admonition info">
+<p class="admonition-title">Information</p>
+<p><a href="http://wiki.dyalog.bramley/index.php/Style_Guide_and_Best_Practice">Style_Guide_and_Best_Practice</a> on the internal wiki covers:</p>
+<ul>
+<li>The structure to use for documents</li>
+<li>General rules to follow when writing, including language-related guidelines such as the use of Dyalog-specific terms, how to mention third-party products, and the use of abbreviations and acronyms.</li>
+</ul>
+<p>Please make sure you follow these as well as the styles detailed on this page.</p>
+</div>
 <p>Some aspects have been adapted in this document for use with Material for MkDocs:</p>
 <ul>
 <li><a href="#headings">Headings</a></li>
@@ -539,27 +603,51 @@
 <li><a href="#notes">Notes</a></li>
 </ul>
 <h2 id="headings">Headings</h2>
+<p>Headings are denoted by a number of octothorpes corresponding to the heading level.</p>
+<pre class="highlight"><code># Heading 1
+## Heading 2
+###### Heading 6</code></pre>
 <p>Headings should be written in <a href="https://en.wikipedia.org/wiki/Title_case#Chicago_Manual_of_Style">title case</a>.</p>
 <p>Try to avoid multiple consecutive headings with no intervening text.</p>
 <h2 id="italics">Italics</h2>
-<p>Use italics when introducing a new term.</p>
+<p>Italics are denoted by single asterisks surrounding the text.</p>
+<p class="example">example</p>
+
+<pre class="highlight"><code>The word *asterisks* is italicised.</code></pre>
+<p>The word <em>asterisks</em> is italicised.</p>
 <h2 id="bold">Bold</h2>
+<p>Bold text is denoted by double asterisks surrounding text.</p>
+<p>Bold text is used for:</p>
 <ul>
-<li>file names, file paths and directories folders and file extensions</li>
-<li>
-<p>UI components (not buttons)
-    <p class="example">example</p></p>
-<blockquote>
-<p>Go to the <strong>file</strong> menu</p>
-</blockquote>
-</li>
+<li>file names</li>
+<li>file paths</li>
+<li>directory and folder names</li>
+<li>file extensions</li>
+<li>UI components (not buttons)</li>
 </ul>
+<p class="example">example</p>
+
+<pre class="highlight"><code>Go to the **file** menu</code></pre>
+<p>Go to the <strong>file</strong> menu</p>
 <h2 id="notes">Notes</h2>
+<h3 id="creating-a-note">Creating a Note</h3>
 <p>Notes are <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">admonitions</a>.</p>
+<p>They are denoted by three exclamation marks followed by the note type and optional title text. On subsequent lines, note content is indented by four spaces.</p>
+<p>We use a fixed set of admonition types for consistency. Do not forget to include custom text on notes which use them and do not change the custom text.</p>
+<p class="example">example</p>
+
+<pre class="highlight"><code>!!! Tip "Hints and Recommendations"
+    This is the note content.</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Hints and Recommendations</p>
+<p>This is the note content.</p>
+</div>
+<h3 id="general-notes-for-emphasis">General Notes for Emphasis</h3>
 <p>Various icons are used in the documentation to emphasise specific material:</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Hints and Recommendations</p>
 <p>Hints, tips, best practice and recommendations from Dyalog Ltd</p>
+<p>This note type is "Tip".</p>
 <p><p class="example">example</p></p>
 <p>If both DOSLimit and BufferSize are set, then the smaller value applies. Dyalog Ltd recommends using a modest BufferSize and not setting EnableBufferSizeHttp to ensure that abnormally large headers are not processed, then setting an appropriate DOSLimit to accommodate the expected size messages</p>
 </div>
@@ -581,32 +669,33 @@
 <p><p class="example">example</p></p>
 <p>Although .dyapp files are supported for backwards compatibility, Dyalog Ltd recommends launching the interpreter directly from any APL source or configuration file (functionality introduced with Dyalog version 18.0) rather than through the now-superseded .dyapp file mechanism.</p>
 </div>
+<h3 id="operating-system-specific-behaviour">Operating-system-specific Behaviour</h3>
 <p>Notes are also used to differentiate between operating-system-specific behaviour in cross-platform documents:</p>
 <div class="admonition linux">
-<p class="admonition-title">Linux</p>
+<p class="admonition-title">Dyalog on Linux</p>
 <p><p class="example">example</p></p>
 <p>The MyUCMDs directory is located directly under the <strong>$HOME</strong> directory</p>
 </div>
 <div class="admonition unix">
-<p class="admonition-title">Unix</p>
+<p class="admonition-title">Dyalog on UNIX</p>
 <p><p class="example">example</p></p>
 <p>By default, the cache file is located in <strong>$HOME/.dyalog/</strong></p>
 </div>
 <div class="admonition macos">
-<p class="admonition-title">Macos</p>
+<p class="admonition-title">Dyalog on macOS</p>
 <p><p class="example">example</p></p>
 <p>By default, the cache file is located in <strong>Users/&lt;name>/.dyalog/</strong></p>
 </div>
-<div class="admonition microsoft windows">
-<p class="admonition-title">Microsoft</p>
+<div class="admonition windows">
+<p class="admonition-title">Dyalog on Microsoft Windows</p>
 <p><p class="example">example</p></p>
 <p>By default, the cache file is located in <strong>Documents\Dyalog APL <version> Files\</strong></p>
 </div>
 <h2 id="actions-and-instructions">Actions and Instructions</h2>
-<p>Blocks which contain instructions should be surrounded by horizontal rules. The introductory line ("To do...") should be <strong>bold</strong>.</p>
+<p>Blocks which contain instructions should be surrounded by horizontal rules. The introductory line ("To do...") should be <strong>bold</strong> and should not end with any punctuation.</p>
 <p><span class="example">Example</span></p>
 <hr />
-<p><strong>To do this thing:</strong></p>
+<p><strong>To do this thing</strong></p>
 <ol>
 <li>Do this thing</li>
 <li>Then do this thing</li>
@@ -616,7 +705,9 @@
 <p>Introduce full examples with <code>&lt;p class="example"&gt;Example&lt;/p&gt;</code> (or "examples") so that it is on a line by itself.</p>
 <p>Exception – if there are several consecutive examples illustrating different things, they can each be introduced with "Example: &lt;text>" if that helps to clarify things for the reader.</p>
 <h2 id="code">Code</h2>
-<p><strong>TODO:</strong> how do we want to handle language-apl/nonAPL and unspecified code blocks?</p>
+<p>Inline code and code blocks render in APL font unless.</p>
+<p>We have disabled syntax highlighting, but in case we decide to  for semantic purposes and 
+<strong>TODO:</strong> how do we want to handle language-apl/nonAPL and unspecified code blocks?</p>
 <h4 id="inline-code">Inline code</h4>
 <p>Inline, use <code>&lt;code&gt;[your code here]&lt;/code&gt;</code> or single backticks <code>`[your code here]`</code>.</p>
 <p class="example">Example</p>
@@ -640,9 +731,10 @@
 hello</code></pre>
 <pre class="highlight"><code>No language specified</code></pre>
 <h3 id="apl-code-in-titles">APL Code <span class="language-apl">+⌿÷≢⌹</span> in Titles</h3>
-<p>Use <code>&lt;span class="language-apl"&gt;</code> to add code to titles. This will be rendered in APL font on the page but not in the navigation menus.</p>
+<p>Try to avoid using APL code in headings.</p>
+<p>If it is essential, use <code>&lt;span class="language-apl"&gt;</code> to add code to titles. This will be rendered in APL font on the page but not in the navigation menus.</p>
 <h2 id="references">References</h2>
-<p>References to other documents should correctly name the document and be italicised.</p>
+<p>References to other documents should correctly name the document and be italicised. Ideally they should link to the document (todo: consider versioning).</p>
 <p class="example">Example</p>
 
 <p>For more information on the Clean function, see the <a href="https://docs.dyalog.com/latest/SALT%20User%20Guide.pdf"><em>SALT User Guide</em></a>.</p>
@@ -680,15 +772,6 @@ An elephant at sunset
 </li>
 <li>Windows Key: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m0 93.7 183.6-25.3v177.4H0V93.7zm0 324.6 183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></span> (<code>:fontawesome-brands-windows:</code>) </li>
 </ul>
-<p class="example">example</p>
-
-<div>
-<ul>
-<li>a list</li>
-<li>a list</li>
-</ul>
-</p>
-</div>
 
 
 
