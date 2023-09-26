@@ -610,10 +610,13 @@
 <p>Headings should be written in <a href="https://en.wikipedia.org/wiki/Title_case#Chicago_Manual_of_Style">title case</a>.</p>
 <p>Try to avoid multiple consecutive headings with no intervening text.</p>
 <h2 id="italics">Italics</h2>
+<p>Use italics when introducing a new term.</p>
 <p>Italics are denoted by single asterisks surrounding the text.</p>
 <p class="example">example</p>
 
+<p>Markup like</p>
 <pre class="highlight"><code>The word *asterisks* is italicised.</code></pre>
+<p>renders as</p>
 <p>The word <em>asterisks</em> is italicised.</p>
 <h2 id="bold">Bold</h2>
 <p>Bold text is denoted by double asterisks surrounding text.</p>
@@ -711,7 +714,9 @@
 <p>Inline, use <code>&lt;code&gt;[your code here]&lt;/code&gt;</code> or single backticks <code>`[your code here]`</code>.</p>
 <p class="example">Example</p>
 
-<pre class="highlight"><code>The average of a vector (&lt;code class="language-apl"&gt;+⌿÷≢&lt;/code&gt;) is the sum divided by the tally.</code></pre>
+<p>The following markup</p>
+<pre class="highlight"><code class="language-html">The average of a vector (&lt;code class="language-apl"&gt;+⌿÷≢&lt;/code&gt;) is the sum divided by the tally.</code></pre>
+<p>renders as</p>
 <p>The average of a vector (<code class="language-apl">+⌿÷≢</code>) is the sum divided by the tally.</p>
 <h4 id="code-blocks">Code blocks</h4>
 <p>Code blocks use <code>&lt;pre&gt;&lt;code class="language-apl"&gt;&lt;/code&gt;&lt;/pre&gt;</code> or triple backticks with "apl" (lowercase) to denote the language. MkDocs will take care of adding the "language-apl" class in this case.</p>
