@@ -1,4 +1,6 @@
 site_name: Material for MkDocs Style Guide
+repo_url: https://github.com/Dyalog/documentation-guidelines
+
 copyright: Copyright &copy; 2015-2022 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong>
 theme:
   name: material
