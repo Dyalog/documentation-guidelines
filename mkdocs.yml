@@ -1,4 +1,4 @@
-site_name: Material for MkDocs Style Guide
+site_name: Dyalog Documentation Guidelines
 repo_url: https://github.com/Dyalog/documentation-guidelines
 
 copyright: Copyright &copy; 2015-2022 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong>
@@ -23,8 +23,8 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - markdown_tables_extended
   - toc:
       title: On this page
@@ -38,4 +38,3 @@ nav:
   - Images: images.md
   - Tables: tables.md
   - CSS: css.md
-  - Process: process.md
