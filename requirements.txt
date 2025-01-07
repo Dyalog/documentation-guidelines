@@ -1,8 +1,5 @@
 mike==2.1.3
 mkdocs-caption
-mkdocs-macros-plugin
 mkdocs-material==9.5.39
 mkdocs-material-extensions
-mkdocs-monorepo-plugin
-mkdocs-site-urls
 markdown_tables_extended

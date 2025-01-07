@@ -40,4 +40,4 @@ jobs:
           git config user.name "GitHub Actions CI Publisher"
           git config user.email "DyalogGithubActions@github.com"
           
-          mike deploy main
+          mike deploy trunk
