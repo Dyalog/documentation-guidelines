@@ -78,6 +78,148 @@ Go to the **file** menu
 Go to the **file** menu
 { .example-output}
 
+## Line breaks
+To create a new line, include two spaces or `<br/>` at the end of the first line.
+    
+<p class="example">Example</p>
+
+```markdown
+This example  
+spans two lines
+```
+
+This example  
+spans two lines
+
+<p class="example">Example</p>
+
+```markdown
+This example<br/>
+spans two lines
+```
+
+This example  
+spans two lines
+
+Leaving a blank line between two lines of text will render as two separate paragraphs with a blank line inbetween them.
+
+<p class="example">Example</p>
+
+```markdown
+This is one sentence.
+
+This is a separate paragraph.
+```
+
+This is one sentence.
+
+This is a separate paragraph.
+
+## Lists
+Lists can be ordered or unordered. Unordered lists can make it easier to read a collection of items at a glance, and ordered lists are used in [instructions](#actions-and-instructions).
+
+### Unordered
+You can make an unordered list by preceding one or more lines of text with `-`, `*`, or `+`.
+
+<p class="example">Example</p>
+
+```
+- Dog
+* Cat
++ Fish
+```
+
+- Dog
+* Cat
++ Fish
+
+### Ordered
+An ordered list has items with numbers followed by full-stops. The list should start with the number one. List items do not have to be in numerical order, which can help if items need to be added, removed, or re-ordered.
+
+<p class="example">Example</p>
+
+```
+1. First item
+1. Second item
+1. Third item
+```
+
+1. First item
+1. Second item
+1. Third item
+
+### Nested lists
+Lists can be indented to create a list within a list. A change of one level is indented by four spaces.
+
+<p class="example">Example</p>
+
+```
+- list item
+- 2nd list item
+    - 1st nested list item
+    - 2nd nested list item
+- 3rd list item
+```
+
+- list item
+- 2nd list item
+    - 1st nested list item
+    - 2nd nested list item
+- 3rd list item
+
+### Multiline list items
+To include multiple lines of plain text, add [line breaks](#line-breaks) to list items.
+
+To include extra content across multiple lines within a list item, match the indentation of the extra content with that of the corresponding list item without blank lines in between. Adding blank lines separates the content from the list and the next list item will begin a new list.
+
+In the example below, the code block belonging to the 1st nested list item is indented up to the start of the list item text. The code block belonging to the 4th list item is unindented (that is, it matches the indentation of the list item number). Indenting to the text makes the intended structure more obvious in the markdown source. The 4th item code block is shown to demonstrate the difference when a blank line is included; compare it to the code block below the 5th list item.
+
+<p class="example">Example</p>
+
+````markdown
+1. list item
+1. 2nd list item
+    1. 1st nested list item
+       ```
+       this code block belongs to the 1st nested list item
+       ```
+    1. 2nd nested list item
+1. 3rd list item  
+   with another line of plain text
+1. 4th list item
+```
+this code block belongs to the 4th list item
+```
+1. 5th list item
+
+```
+this code block does not belong to any list item
+```
+
+1. This item begins a new list
+````
+
+1. list item
+1. 2nd list item
+    1. 1st nested list item
+       ```
+       this code block belongs to the 1st nested list item
+       ```
+    1. 2nd nested list item
+1. 3rd list item  
+   with another line of plain text
+1. 4th list item
+```
+this code block belongs to the 4th list item
+```
+1. 5th list item
+
+```
+this code block does not belong to any list item
+```
+
+1. This item begins a new list
+
 ## Hyperlinks
 Used to create links to other parts of the same document, [other documents](#references) or external sources.
 
