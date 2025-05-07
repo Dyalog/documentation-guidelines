@@ -319,44 +319,32 @@ Instructions are written as an ordered list. Blocks that contain instructions sh
 </div>>
 
 ## Examples
-Examples are used to demonstrate the functionality discussed.
 
-Introduce full examples with:
+Most pages we write will contain _examples_, like code, commands or config snippets. Traditionally, we have used a heading style for examples, and whilst this practice is pervasive in the documentation, you should consider carefully the semantic structure of your examples. Headings should be used to define the structure of a document, not the style. Use a heading if you think that the example should be navigable to via the the hierarchical table of contents panes (left or right). This will normally mean that the title of your example heading is something more informative than a bare "Example". 
 
+If your example is just a bit of code after a paragraph of explanation, perhaps all you need is a code block without a heading or anything.
+
+In order to support the existing header-styled examples, there is a specific CSS class available, `example`, letting you say
+
+```other
+## Example { .example }
+
+Example body here
 ```
-example (or examples)
-{ .example}
-```
+This will exclude this heading from the navigational structure, and use the specific print style for the word "Example" in the PDF-conversion.
 
-which renders as `<p class="example">example</p>`.
+In summary:
 
-Exception – if there are several consecutive examples illustrating different things, they can each be introduced with "Example: <text\>" if that helps to clarify things for the reader.
-
-!!! Info "Information"
-    The examples in this document use `<div class="example-output" markdown="1">` to provide a grey background that distinguishes examples from normal text. However, we do not use this convention in our actual documentation.
-
-```
-example
-{ .example}
-
-This is an example
-```
-
-<div class="example-output" markdown="1">
-
-example
-{ .example}
-
-This is an example
-
-</div>
+1. If your example is significant, and you want it reachable via the nav, choose a clear title, and not "Example". Use a normal heading.
+2. If your example is the culmination of an explanation, just use a code block.
+3. If you _absolutely_ have to use a heading called "Example", attach `{ .example }` at the end.
 
 ## Code
 Inline code and code blocks render in APL font unless the class "language-other" is used.
 
 Syntax highlighting is not enabled.
 
-#### Inline code
+### Inline code
 Inline, use `<code>[your code here]</code>` or single backticks `` `[your code here]` ``.
 
 <p class="example">Example: APL code</p>
@@ -383,7 +371,7 @@ The average of a vector (<code class="language-apl">+⌿÷≢</code>) is the sum
 
 </div>>
 
-#### APL Code blocks
+### APL Code blocks
 Code blocks use triple backticks with "apl" (lowercase) to denote the language.
 
 
@@ -406,7 +394,7 @@ Code blocks use triple backticks with "apl" (lowercase) to denote the language.
 4 5 6 7 8 9 10 11 12 13
 ```
 
-#### Non-APL Code Blocks
+### Non-APL Code Blocks
 Use triple backticks with the name of the language or format, or "other" (lowercase).
 
 <p class="example">Example: Using backticks</p>
