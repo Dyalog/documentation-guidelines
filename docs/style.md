@@ -523,4 +523,4 @@ Use <kbd markdown="1">:material-apple-keyboard-command:</kbd> + <kbd>C</kbd> to 
 
 <div class="example-output" markdown="1">
 Use <kbd markdown="1">:material-apple-keyboard-command:</kbd> + <kbd>C</kbd> to copy text
-</div>>
+</div>
