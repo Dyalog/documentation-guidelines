@@ -81,7 +81,7 @@ Go to the **file** menu
 { .example-output}
 
 ## Hyperlinks
-Used to create links to other parts of the same document, [other documents](#references) or external sources.
+Used to create links to other parts of the same document, [other documents](#references) or external sources. Also see the [references](#references) section.
 
 Link text is surrounded by square brackets and the link URL is in round parentheses.
 
