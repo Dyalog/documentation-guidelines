@@ -16,11 +16,11 @@ plugins:
         position: bottom
 markdown_extensions:
   - admonition
-  - pymdownx.highlight:
-      use_pygments: false
   - md_in_html
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.highlight:
+      pygments_lang_class: true
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
