@@ -54,3 +54,131 @@ When referring to keyboard shortcuts, such as those controlled by on Microsoft W
 Sometimes it is relevant to include an icon. For example, when describing a combination of key presses. Sometimes it is relevant to include an icon. For example, when describing a combination of key presses. Sometimes it is <kbd>Enter</kbd> to include an icon. <kbd markdown="1">:material-apple-keyboard-command:</kbd> + <kbd>C</kbd> to copy text For example, when describing a combination of key presses. Sometimes it is relevant to include an icon. For example, when describing a combination of key presses. Sometimes it is relevant to include an icon. For example, when describing a combination of key presses.
 
 The keyboard text Enter + C and icons :material-apple-keyboard-command: inline.
+
+## Lists
+This is some text:
+
+- and a list
+- second item
+    - nested item
+    - second nested item
+        - doubly nested item
+    - third nested item
+- third ite
+
+paragraph text paragraph text paragraph text paragraphparagraph text paragraph text paragraph text paragraphparagraph text paragraph text paragraph text paragraphparagraph text paragraph text paragraph text paragraphparagraph text paragraph text paragraph text paragraph
+
+<ul>
+<li>and a list</li>
+<li>second item<ul>
+<li>nested item</li>
+<li>second nested item<ul>
+<li>doubly nested item</li>
+</ul>
+</li>
+<li>third nested item</li>
+</ul>
+</li>
+<li>third ite</li>
+</ul>
+
+paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text 
+
+1. first item
+1. first item
+    1. first item
+    1. first item
+1. first item
+1. first item
+    1. first item
+        1. first item
+            1. first item
+        1. first item
+        1. first item
+    1. first item
+1. first item
+
+## Headings (2)
+Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text 
+
+### Heading 3
+Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text 
+
+#### Heading 4
+Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text Here is some text 
+
+## Code Blocks
+```apl
+      ([(1 2 3) 'abc'
+        3 4]
+       [5 6
+        7 8])
+┌───────────┬───┐
+│┌─────┬───┐│5 6│
+││1 2 3│abc││7 8│
+│├─────┼───┤│   │
+││3    │4  ││   │
+│└─────┴───┘│   │
+└───────────┴───┘
+```
+
+```
+this is just a plain code block with no particular language
+```
+
+```cs
+class Program
+{
+  static void MyMethod() 
+  {
+    // code to be executed
+  }
+}
+```
+
+and some text
+
+```nonAPL
+This block is explicitly language-nonAPL.
+class Program
+{
+  static void MyMethod() 
+  {
+    // code to be executed
+  }
+}
+It has no highlighting, but renders as class="language-text" or "language-nonAPL" depending on the renderer.
+```
+
+```python
+function python(args):
+    return stuff
+```
+
+```text
+this is a text one
+```
+
+```ial4oijf
+this is some garbage
+```
+
+Default to `APL (+⌿÷≢)` for inline code. This sentence has some <code class="language-nonAPL">inline non-APL code</code> in a line.
+
+And what about a pre?
+
+<pre><code class="language-nonAPL">
+# this is supposed to be nonAPL
+
+function foo {
+    main
+}
+</code></pre>
+
+## Table
+Table: Cells with content with content with content with content with content { #experiments-table-1 }
+
+| heading 1 | heading 2 | 
+| --------- | --------- | 
+| content 1 | content 2 |
+| content 3 | content 4 | 
