@@ -1,9 +1,45 @@
 @font-face {
     font-family: APL;
-    src: local("APL385 Unicode"), url("../fonts/apl385.ttf");
+    src: local("APL385 Unicode"), url("../fonts/APL385/apl385.ttf");
 }
 
-.language-APL {
+/* Custom colors */
+:root {
+    --md-primary-fg-color: #FF6A13;
+    --md-primary-fg-color--dark: #563336;
+    --md-default-bg-color: white;
+    --md-code-hl-number-color: #797979;
+    --dyalog-body-text-color: #232222;
+    --dyalog-brand-color-midnight: #003B5C;
+    --md-accent-fg-color: var(--dyalog-brand-color-midnight);
+}
+
+body {
+  color: var(--dyalog-body-text-color);
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
+  color: var(--dyalog-body-text-color);
+}
+.md-typeset h1 code, .md-typeset h2 code, .md-typeset h3 code, .md-typeset h4 code {
+    font-size: inherit;
+}
+
+/* Table of Contents (TOC) section headings */
+ .md-nav__item--section {
+    margin-top: 2em;
+}
+.md-nav .md-nav__item--section > .md-nav__link {
+    color: var(--dyalog-brand-color-midnight);
+}
+
+.example {
+    font-variant-caps: all-small-caps;
+    font-size: 1em!important;
+    font-weight: 500!important;
+}
+
+.language-APL, .language-apl, .language-APL pre code, .language-apl pre code {
     font-family: APL !important;
     line-height: 1.2em !important;
 }
@@ -12,7 +48,8 @@ code, .command, .Dyalog {
     font-family: APL;
 }
 .md-typeset code { 
-    font-size: inherit;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     background: none!important;
  }
 
@@ -25,6 +62,10 @@ code, .command, .Dyalog {
     height: 1.2rem !important;
 }
 
+.md-typeset img {
+    vertical-align: text-bottom;
+}
+
 @media screen and (max-width: 76.1875em) {
     .md-logo>img {
         width: 10rem !important;
@@ -32,23 +73,23 @@ code, .command, .Dyalog {
     }
 }
 
-/* Custom colors */
-:root {
-    --md-primary-fg-color: #FF6A13;
-    --md-primary-fg-color--dark: #563336;
-    --md-default-bg-color: #F8F8F8;
-    --md-code-hl-number-color: #797979;
-}
-
 /* Reduce vertical table spacing, and put in a faint cell border */
-table {
+.md-typeset table:not([class]) {
+    border: none;
     border-collapse: collapse;
+}
+caption {
+    text-wrap: none;
 }
 
 th, td {
-    border: 1px solid #eee;
+    border: 1px solid #bbb;
     padding: 4px !important;
     text-align: left;
+}
+
+.md-typeset table th, .md-typeset table td {
+    font-size: 0.8rem;
 }
 
 /* Style the heading container for the Language Reference */
@@ -74,6 +115,14 @@ th, td {
     text-align: right;
     color: white;
     font-family: APL;
+}
+
+/* List styles */
+.md-typeset li ul li {
+  list-style: circle;
+}
+.md-typeset li ul li ul li {
+  list-style: square;
 }
 
 /* Compress lists a bit vertcially */
@@ -108,36 +157,39 @@ hr+pre>code {
 /* Admonition styles */
   /* Admonition icon SVGs */
 :root {
-    --md-admonition-icon--note: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 0 1 9 6.25c0 .177-.04.264-.077.318a.956.956 0 0 1-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 0 0-.313.195 2.416 2.416 0 0 0-.692.661.75.75 0 0 0 1.248.832.956.956 0 0 1 .276-.245 6.3 6.3 0 0 1 .26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 0 0 8 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 1 0 1.342.67z"/></svg>');
+    --md-admonition-icon--note: url('../images/admonitions/admonition_note-01_floating_gunmetal-2A3244_128.svg');
     /* ↑ temporary generic note until notes have been replaced by specific note types below */
-    --md-admonition-icon--hint: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 0 1 9 6.25c0 .177-.04.264-.077.318a.956.956 0 0 1-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 0 0-.313.195 2.416 2.416 0 0 0-.692.661.75.75 0 0 0 1.248.832.956.956 0 0 1 .276-.245 6.3 6.3 0 0 1 .26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 0 0 8 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 1 0 1.342.67z"/></svg>');
-    --md-admonition-icon--info: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 0 1 9 6.25c0 .177-.04.264-.077.318a.956.956 0 0 1-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 0 0-.313.195 2.416 2.416 0 0 0-.692.661.75.75 0 0 0 1.248.832.956.956 0 0 1 .276-.245 6.3 6.3 0 0 1 .26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 0 0 8 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 1 0 1.342.67z"/></svg>');
-    --md-admonition-icon--warning: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 0 1 9 6.25c0 .177-.04.264-.077.318a.956.956 0 0 1-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 0 0-.313.195 2.416 2.416 0 0 0-.692.661.75.75 0 0 0 1.248.832.956.956 0 0 1 .276-.245 6.3 6.3 0 0 1 .26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 0 0 8 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 1 0 1.342.67z"/></svg>');
-    --md-admonition-icon--legacy: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 19-3-3v2h-4v2h4v2l3-3m-10 0c0-.3 0-.7.1-1H6v-2h7.8c.5-.8 1.1-1.5 1.9-2H6v-2h12v1.1c.3-.1.7-.1 1-.1s.7 0 1 .1V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h7.8c-.5-.9-.8-1.9-.8-3m0-15.5L18.5 9H13V3.5Z"/></svg>');
-    --md-admonition-icon--linux: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 19-3-3v2h-4v2h4v2l3-3m-10 0c0-.3 0-.7.1-1H6v-2h7.8c.5-.8 1.1-1.5 1.9-2H6v-2h12v1.1c.3-.1.7-.1 1-.1s.7 0 1 .1V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h7.8c-.5-.9-.8-1.9-.8-3m0-15.5L18.5 9H13V3.5Z"/></svg>');
-    --md-admonition-icon--unix: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 19-3-3v2h-4v2h4v2l3-3m-10 0c0-.3 0-.7.1-1H6v-2h7.8c.5-.8 1.1-1.5 1.9-2H6v-2h12v1.1c.3-.1.7-.1 1-.1s.7 0 1 .1V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h7.8c-.5-.9-.8-1.9-.8-3m0-15.5L18.5 9H13V3.5Z"/></svg>');
-    --md-admonition-icon--macos: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 19-3-3v2h-4v2h4v2l3-3m-10 0c0-.3 0-.7.1-1H6v-2h7.8c.5-.8 1.1-1.5 1.9-2H6v-2h12v1.1c.3-.1.7-.1 1-.1s.7 0 1 .1V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h7.8c-.5-.9-.8-1.9-.8-3m0-15.5L18.5 9H13V3.5Z"/></svg>');
-    --md-admonition-icon--windows: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 19-3-3v2h-4v2h4v2l3-3m-10 0c0-.3 0-.7.1-1H6v-2h7.8c.5-.8 1.1-1.5 1.9-2H6v-2h12v1.1c.3-.1.7-.1 1-.1s.7 0 1 .1V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h7.8c-.5-.9-.8-1.9-.8-3m0-15.5L18.5 9H13V3.5Z"/></svg>');
+    --md-admonition-icon--hint: url('../images/admonitions/admonition_hint-01_floating_peel-FFA300_128.svg');
+    --md-admonition-icon--info: url('../images/admonitions/admonition_information-01_midnight-003B5C_128.svg');
+    --md-admonition-icon--warning: url('../images/admonitions/admonition_warning-01_floating_rose-CA2E51_128.svg');
+    --md-admonition-icon--legacy: url('../images/admonitions/admonition_legacy-01_floating_grey-505050_128.svg');
+    --md-admonition-icon--linux: url('../images/admonitions/admonition_os-01_floating_dark-lavender-7370A9_128.svg');
+    --md-admonition-icon--unix: url('../images/admonitions/admonition_os-01_floating_dark-lavender-7370A9_128.svg');
+    --md-admonition-icon--macos: url('../images/admonitions/admonition_os-01_floating_dark-lavender-7370A9_128.svg');
+    --md-admonition-icon--windows: url('../images/admonitions/admonition_os-01_floating_dark-lavender-7370A9_128.svg');
 }
   /* Colours */ 
 :root {
-    --md-admonition-color-note: #FF6A13;
-    --md-admonition-color-hint: #FF6A13;
-    --md-admonition-color-info: #FF6A13;
-    --md-admonition-color-warning: #FF6A13;
-    --md-admonition-color-legacy: #FF6A13;
-    --md-admonition-color-linux: #FF6A13;
-    --md-admonition-color-unix: #FF6A13;
-    --md-admonition-color-macos: #FF6A13;
-    --md-admonition-color-windows: #FF6A13;
+    --md-admonition-color-note: #2A3244;
+    --md-admonition-color-hint: #FFA300;
+    --md-admonition-color-info: #003B5C;
+    --md-admonition-color-warning: #CA2E51;
+    --md-admonition-color-legacy: #505050;
+    --md-admonition-color-linux: #7370A9;
+    --md-admonition-color-unix: #7370A9;
+    --md-admonition-color-macos: #7370A9;
+    --md-admonition-color-windows: #7370A9;
 }
 
   /* Generic */
 .md-typeset .admonition {
-	border-width: 0 0 0 3px;
+	border-width: 0 0 0 4px;
     border-radius: 0;
     box-shadow: none;
     font-size: inherit;
+}
+.md-typeset .admonition .admonition-title:before {
+    mask-size: 180%;
 }
 .md-typeset .admonition .admonition-title {
 	background: none;
