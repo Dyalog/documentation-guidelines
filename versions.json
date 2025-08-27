@@ -7,14 +7,14 @@
   {
     "version": "experiments",
     "title": "experiments",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "20.0",
     "title": "20.0",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "1.0",
