@@ -69,7 +69,7 @@ Use italics when:
 - naming a function or operator by its English name
 - an algebraic term is being used instead of the number, then it should be italicised to distinguish it from the postscript, for example, "the ith term" or "the nth time".
 
-When naming a primitive, give its English name in italics followed by its glyph in a code span, and link the first mention to the primitive's page, for example, [*format* (`⍕`)](#).
+When naming a primitive, give its English name in italics followed by its glyph in a code span, and link the first mention to the primitive's page, for example, [*format* (`⍕`)](#). Name any other glyph the same way, dropping the link where there is no page to link to, for example, "_quad_ (`⎕`)" rather than "the Quad symbol".
 
 Italics are denoted by single asterisks or underscores surrounding the text.
 
