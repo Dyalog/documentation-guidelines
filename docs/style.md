@@ -489,7 +489,7 @@ Make the term itself the link within the running sentence; do not append a trail
 
 Link the first mention of a function, operator, configuration parameter, or defined term to its reference page. When the target is a specific subsection, link to that subsection's anchor, not to the page as a whole.
 
-On repeated mentions, link only the first; later mentions of the same target stay plain.
+On repeated mentions, link only the first; later mentions of the same target stay plain. A request to "link X" is already satisfied if the page links X earlier, so check the whole page before adding one; where the earlier mention is the better place for it, move the link rather than adding a second.
 
 Make a link relative to the current file, not an absolute site path. When the exact target cannot be linked (for example, it sits inside a collapsible), link to the containing page instead.
 
