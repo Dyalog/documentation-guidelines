@@ -519,7 +519,7 @@ See [Note Types](#note-types)
 </div>>
 
 ### To another document
-References to other documents should correctly name the document and be italicised. Ideally they should link to the document.
+References to other documents should correctly name the document and be italicised. Ideally they should link to the document. Before naming one, confirm that it still exists, and link it: an italicised title with no link is invisible to the link checker, so a reference to a document that has been withdrawn or folded into another guide rots silently. Where the material now lives in this documentation set, link the section that covers it instead of naming the old document.
 
 <p class="example">Example</p>
 
