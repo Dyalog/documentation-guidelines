@@ -155,7 +155,7 @@ Do not use a numbered list where the numbering could imply an order or precedenc
 
 Legally, the owner of the product ought to be included the first time that a product is mentioned - this applies to every paragraph. For example, when writing about something that's on the Windows system, "Microsoft Windows" must be used the first time in the paragraph and just "Windows" can be used after that. However, if Windows is referred to in the subsequent paragraph, it needs to be "Microsoft Windows" again.
 
-Write "Unix", not "UNIX", when referring generically to non-Windows systems: "UNIX" is a trademark and names the certified operating system rather than the family. Product names keep their own spelling, so AIX remains "AIX".
+Write "Unix", not "UNIX", when referring generically to non-Windows systems: "UNIX" is a trademark and names the certified operating system rather than the family. Product names keep their own spelling, so AIX remains "AIX". "Unix" already covers macOS and Linux, so write "Unix" alone rather than "Unix and macOS" or "UNIX/macOS"; name macOS separately only where its behaviour differs, in which case it takes its own `macos` admonition.
 
 ## Describing Parameters and Values
 
