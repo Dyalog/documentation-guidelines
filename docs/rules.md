@@ -70,7 +70,7 @@ The following table lists correct terminology and terms to avoid. A complete lis
 |for example|eg, e.g., eg.|
 |that is|ie, i.e., ie.|
 |note|NB, N.B.|
-|and so on|etc, etc.|
+|and so on|etc, etc., and so forth|
 |Boolean|boolean|
 |Unix|UNIX, unix|
 |configuration parameter|environment variable|
