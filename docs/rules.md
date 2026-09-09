@@ -169,6 +169,10 @@ Give a default that differs between operating systems for each one, and never st
 
 Describe a Boolean parameter with a parallel "whether ... or not" phrase that gives both values and marks the default, for example, "specifies whether (`1`) or not (`0`, default) to enable multi-line input". Where it helps, add a sentence explaining what the default means, for example, "the default is `1`, meaning that multi-line input is enabled".
 
+Set argument, option, and result *values* in code wherever they appear, not only the names: "`0` if the object is not an operator", "if `X` is `1`", "always reported as `0`". Counts and quantities stay plain: "0 or more names", "a 4-element vector". Where a table cell lists the alternative values of one element, separate them with commas rather than running them together.
+
+When a system function is documented as two pages, one per form, each page reaches the other through an organic link on the form itself ("the [dyadic form](x-dyadic.md) closely emulates APL2"), not through a trailing "for the other form, see ...". The disambiguation page opens with a single sentence on what the function does, common to both forms, before naming either.
+
 Introduce a function's arguments and result with consistent lead phrasing, for example, "`Y` is specified as either a character vector or a vector of character vectors", "The result `R` is a two-element vector consisting of ...", or "`X` must be omitted". Argument and result names (`X`, `Y`, `R`) are set in code spans wherever they appear, in prose as well as in code.
 
 Where an argument or option takes a set of values, list them as "value – meaning" pairs (en-dash) and mark the default inline, for example:
