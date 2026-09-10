@@ -1,5 +1,11 @@
 # Dyalog Documentation Style Guide
 
+## Introduction
+
+These guidelines collect a large number of rules, and no contributor is expected to remember or apply every one of them. Their purpose is to keep the documentation consistent, not to discourage you from contributing.
+
+You are welcome to use AI tools to help you follow the rules: giving an assistant your draft together with the relevant parts of this guide is an effective way to find anything you have missed. Equally, if a contribution does not follow every rule, there is no need to worry, because Dyalog uses AI in the same way to make contributions compliant with these guidelines before they are published. Please focus on the content, and leave this final adjustment to Dyalog.
+
 ## To Do
 - references in HTML vs. PDF
 - consider linking to specific document versions in references to other documents
