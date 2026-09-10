@@ -186,6 +186,8 @@ A system function's variant options are documented under a "Variant Options" H2,
 
 Open the H2 with an introductory line that is consistent across all the system-function pages: name the _variant_ operator, list the options (in code font, with a serial comma), and link to a captioned summarising table by an empty cross-reference, for example, "`⎕FCHK` supports three variant options, `Task`, `Repair`, and `Force`, specified using the _variant_ operator [`⍠`](#), summarised in [](#variantoptionsforfchk), and described in detail beneath it. The principal option is `Repair`." Give that table a caption, "Table: Variant options for `⎕FCHK` { #variantoptionsforfchk }". When several options share one H3, the heading stays singular: "Variant Option: `A`, `B`, and `C`".
 
+In an example, force the display of a shy result with `⎕←`, not with `⊢` or `+`. Neither `⊢` nor `+` displays anything when the example is run under **dyalogscript**, and monadic `+` is _conjugate_, so it alters a complex result: `+2j3` is `2J¯3`.
+
 ## Deprecations
 
 Describe a deprecated feature consistently:
