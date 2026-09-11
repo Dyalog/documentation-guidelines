@@ -2,7 +2,6 @@
 
 ## To Do
 - references in HTML vs. PDF
-- consider linking to specific document versions in references to other documents
 
 ## Markdown and HTML
 This document, and the documentation to which it refers, is written in Markdown.

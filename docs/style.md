@@ -15,6 +15,7 @@ Some aspects have been adapted in this document for use with Material for MkDocs
 
 - [Headings](#headings)
 - [Code](#code)
+- [Hyperlinks](#hyperlinks)
 - [Notes](#notes)
 
 ## Document structure
@@ -114,6 +115,27 @@ Link can be downloaded from [https://github.com/Dyalog/link](https://github.com/
 Link can be downloaded from [https://github.com/Dyalog/link](https://github.com/Dyalog/link)
 </div>
 
+### Link targets
+
+Link to another page by its source path, relative to the file you are editing and ending in `.md`. Add a heading anchor to link to a section.
+
+```
+[⎕DT](../system-functions/dt.md)
+[Dictionary option](../system-functions/dt.md#dictionary)
+```
+
+Across guides, count from the guide directory, not from the published URL. Each guide's `docs/` folder is mounted at the guide's slug, so from `windows-ui-guide/docs/editor.md` the Language Reference Guide is one level up:
+
+```
+[PCRE](../language-reference-guide/pcre-specifications.md)
+```
+
+Do not write a bare target (`../guide/page`), a trailing slash (`../guide/page/`), a docs.dyalog.com URL, or a path containing `docs/`. MkDocs rewrites and validates only `.md` targets. Anything else is passed through to the rendered page unchecked, so a moved page breaks such a link silently, and the bare form sends every reader through a server redirect. A `.md` path is also version-independent: the published site carries a version prefix that the source never needs to know.
+
+Links inside raw HTML are never rewritten. Where a table needs links, use a Markdown table; see [Tables](./tables.md) for the headerless form.
+
+In the documentation repository, `python tools/utils/bare_links.py` reports every link that breaks this rule and can rewrite them.
+
 ## Mixing HTML and Markdown
 
 All HTML is valid Markdown, which on occasion provides a helpful escape hatch to create more elaborate constructs not supported directly in Markdown. However, avoid this unless absolutely necessary. The justifications for this are:
@@ -127,7 +149,7 @@ We have added extensions to make the use of HTML avoidable:
 * Attribute lists, such as `{ .example}` to allow for assigning CSS classes and IDs to elements without encasing them in HTML tags.
 
 ## Markdown inside HTML
-Sometimes it might be useful to use Markdown inside HTML tags. For example, when including links inside a table.
+Where HTML is unavoidable, any Markdown inside it renders only if the enclosing tag carries `markdown="1"`. Links are the case that matters most: MkDocs rewrites and validates a link only when it is Markdown, so a link written as raw `<a href>` is emitted exactly as typed and never checked. Prefer a Markdown construct in the first place, such as a headerless [table](./tables.md).
 
 Set `markdown="1"` inside the opening tag.
 
